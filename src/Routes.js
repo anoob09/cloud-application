@@ -1,34 +1,18 @@
-import {
-    createBrowserRouter,
-    RouterProvider,
-  } from "react-router-dom";
-  import Layout from "./components/layout/Layout";  
-  import HomeLayout from "./components/layout/home/HomeLayout";
+import { Routes, Route } from "react-router-dom";
+import HomeLayout from "./components/layout/home/HomeLayout";
 import Email from "./components/layout/email/Email";
+import Photo from "./components/layout/photo/Photo";
+import NotFound from "./components/layout/page404/NotFound";
 
-  function Routes() {
-    const router = createBrowserRouter([
-      {
-        // parent route component
-        element: <Layout />,
-        // child route components
-        children: [
-          {
-            path: "/",
-            element: <HomeLayout />,
-          },
-          // other pages....
-          {
-            path: "/email",
-            element: <Email />,
-          },
-        ],
-      },
-    ])
-  
-    return (
-        <RouterProvider router={router} />
-    )
-  }
-  
-  export default Routes;
+function App() {
+  return (
+      <Routes>
+        <Route path="/" element={<HomeLayout />} />
+        <Route path="/email" element={<Email />} />
+        <Route path="/photo" element={<Photo />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+  );
+}
+
+export default App;
