@@ -1,0 +1,19 @@
+{
+    "username": "johndoe",
+    "name": "John Doe",
+    "email": "johndoe@eaxmple.com",
+    "apps": [
+      {
+        "name": "Email",
+        "code": "email"
+      },
+      {
+        "name": "Photo Library",
+        "code": "photos"
+      },
+      {
+        "name": "Storage",
+        "code": "storage"
+      }
+    ]
+  }
