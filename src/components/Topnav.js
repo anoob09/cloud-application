@@ -15,7 +15,6 @@ import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
 import UserData from "../mockdata/UserMetadata.json";
 import { useLocation } from "react-router-dom";
-import { LocationSearching } from "@mui/icons-material";
 
 const pages = UserData["apps"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -50,24 +49,24 @@ function TopNav(props) {
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            Cloud UI
-          </Typography>
-
+          <Link to="/" style={removeUnderline}>
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex", color: "white" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              Cloud UI
+            </Typography>
+          </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -125,14 +124,19 @@ function TopNav(props) {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Link
-                style={removeUnderline}
-                to={page["code"]}
-              >
+              <Link style={removeUnderline} to={page["code"]}>
                 <Button
                   key={page["code"]}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block", fontWeight: location.pathname.endsWith(page["code"]) ? 800 : 400 }}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    width: "150px",
+                    display: "block",
+                    fontWeight: location.pathname.endsWith(page["code"])
+                      ? 800
+                      : 400,
+                  }}
                 >
                   {page["name"]}
                 </Button>
@@ -143,7 +147,7 @@ function TopNav(props) {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="John Doe" src="../../public/panda.jpg" />
               </IconButton>
             </Tooltip>
             <Menu

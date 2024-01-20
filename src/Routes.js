@@ -6,12 +6,14 @@ import NotFound from "./pages/page404/NotFound";
 
 function App() {
   return (
+    <div className="p-10">
       <Routes>
         <Route path="/" element={<HomeLayout />} />
         <Route path="/email" element={<Email />} />
         <Route path="/photos" element={<Photo />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </div>
   );
 }
 

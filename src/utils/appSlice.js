@@ -3,8 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 const appSlice = createSlice({
     name: 'app',
     initialState: {
+        userDetails: {},
         isMenuOpen: "anup",
         activeApp: "",
+        emails: []
     },
     reducers: {
         toggleMenu: (state, data) => {
@@ -15,6 +17,12 @@ const appSlice = createSlice({
         },
         setActiveApp: (state, data) => {
             state.activeApp = data.payload
+        },
+        setUserDetails: (state, data) => {
+            state.userDetails = data.payload
+        },
+        setEmails: (state, data) => {
+            state.emails = data.payload
         }
     }
 })
@@ -22,5 +30,7 @@ const appSlice = createSlice({
 export const {
     toggleMenu, 
     closeMenu,
-    setActiveApp } = appSlice.actions;
+    setActiveApp,
+    setUserDetails,
+    setEmails } = appSlice.actions;
 export default appSlice.reducer

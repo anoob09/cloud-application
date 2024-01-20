@@ -1,12 +1,9 @@
 import React from "react";
-import UserData from '../../mockdata/UserMetadata.json'
-
+import UserDetails from "../../components/UserDetailsCard";
 const HomeLayout = () => {
-    const userData = UserData;
+
     return (
-        <div>
-            HomeLayout
-        </div>
+       <UserDetails />
     )
 };
 

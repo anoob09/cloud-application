@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from 'react-redux'
-import { toggleMenu } from '../../utils/appSlice.js';
+import EmailList from "./EmailList.js";
+import { setEmails } from "../../utils/appSlice.js";
 
 const Email = () => {
+    
     const dispatch = useDispatch();
-    const toggleMenuBar = () => {
-        dispatch(toggleMenu("sdasd"))
+    const emailList = useSelector(store => store.app.emails);
+    const deleteEmail = (toBeDeleted) => {
+        const remainingEmails = emailList.filter((email, index) => !toBeDeleted.includes(email["id"]));
+        dispatch(setEmails(remainingEmails))
     }
-    const isMenu = useSelector(store => store.app.isMenuOpen);
+
     return (
-        <div>
-            {isMenu} email
-            <button onClick={()=>toggleMenuBar()}>click here</button>
-        </div>
+        <EmailList emailList={emailList} deleteEmail={deleteEmail} />
     )
 };
 
