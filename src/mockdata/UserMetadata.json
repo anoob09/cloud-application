@@ -14,6 +14,10 @@
       {
         "name": "Storage",
         "code": "storage"
+      },
+      {
+        "name": "Calendar",
+        "code": "calendar"
       }
     ]
   }

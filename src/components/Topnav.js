@@ -97,9 +97,11 @@ function TopNav(props) {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page["code"]} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page["name"]}</Typography>
-                </MenuItem>
+                <Link style={removeUnderline} to={page["code"]}>
+                  <MenuItem key={page["code"]} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page["name"]}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
