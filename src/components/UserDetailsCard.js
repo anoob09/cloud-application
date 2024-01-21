@@ -16,8 +16,8 @@ export default function UserDetails() {
       >
       <CardMedia
         sx={{ height: 140 }}
-        src="../../public/panda.jpg"
-        title="green iguana"
+        src=""
+        title="panda"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">

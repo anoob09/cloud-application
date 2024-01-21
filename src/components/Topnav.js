@@ -149,7 +149,7 @@ function TopNav(props) {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="John Doe" src="../../public/panda.jpg" />
+                <Avatar alt="John Doe" src="" />
               </IconButton>
             </Tooltip>
             <Menu
