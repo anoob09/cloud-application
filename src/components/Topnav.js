@@ -19,7 +19,7 @@ import { useLocation } from "react-router-dom";
 const pages = UserData["apps"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-function TopNav(props) {
+function TopNav() {
   const location = useLocation();
   console.log(location.pathname);
 
@@ -43,7 +43,6 @@ function TopNav(props) {
 
   const removeUnderline = { "text-decoration": "none" };
 
-  console.log("PAGES", pages, "pages");
   return (
     <AppBar position="static">
       <Container maxWidth="xl">
