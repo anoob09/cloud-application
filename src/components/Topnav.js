@@ -21,7 +21,6 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function TopNav() {
   const location = useLocation();
-  console.log(location.pathname);
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
@@ -109,7 +108,7 @@ function TopNav() {
             variant="h5"
             noWrap
             component="a"
-            href="#app-bar-with-responsive-menu"
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },

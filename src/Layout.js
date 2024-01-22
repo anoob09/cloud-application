@@ -3,7 +3,7 @@ import Routes from "./Routes";
 import TopNav from "./components/Topnav";
 import { fetchUserDetails, fetchUserEmails } from "./api/UserAPI.js";
 import { useDispatch } from 'react-redux';
-import { setUserDetails, setEmails } from './utils/appSlice.js';
+import { setUserDetails, setEmails } from './utils/Actions.js';
 
 const Layout = () => {
     const dispatch = useDispatch();

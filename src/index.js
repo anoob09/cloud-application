@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from 'react-redux';
-import store from './utils/store';
+import store from './utils/Store';
 import { BrowserRouter } from "react-router-dom";
 import Layout from "./Layout";
 import reportWebVitals from './reportWebVitals';
