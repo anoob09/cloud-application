@@ -19,6 +19,10 @@
       {
         "name": "Admin",
         "code": "admin"
+      },
+      {
+        "name": "Invalid app",
+        "code": "invalidapp"
       }
     ]
   }
