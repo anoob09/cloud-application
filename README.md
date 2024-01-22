@@ -8,3 +8,4 @@
   7. emotion/styled (for writing css within js and styling inner elements from Material UI components)
 
 In this project, I have focused more on the functionality and code instead of styling because it was taking longer then expected. The website is pretty responsive as well for all screen sizes. 
+Note: I had to remvoe Redux Saga since it felt like overkill for a simple task.
